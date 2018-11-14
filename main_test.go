@@ -37,7 +37,6 @@ func TestGetMethod(t *testing.T) {
 	if bodyJSON[0].Code != 200 {
 		t.Fatal("Home Handler sent the wrong response code", string(bodyByte))
 	}
-
 }
 
 func TestPostMethod(t *testing.T) {
@@ -57,12 +56,11 @@ func TestPostMethod(t *testing.T) {
 		log.Fatal("Something happened parsing the response:", err)
 	}
 
-	if bodyJSON[0].Message != "Hello GET" {
+	if bodyJSON[0].Message != "Hello POST" {
 		t.Fatal("Home Handler sent the wrong response message", string(bodyByte))
 	}
 
 	if bodyJSON[0].Code != 200 {
 		t.Fatal("Home Handler sent the wrong response code", string(bodyByte))
 	}
-
 }

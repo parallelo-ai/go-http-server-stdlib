@@ -55,5 +55,5 @@ func main() {
 
 	Info.Println("Listening at 5555")
 
-	log.Fatalf("INFO: ", log.Ldate|log.Ltime, http.ListenAndServe(":5555", nil))
+	log.Fatalf("APP: %d %s ", log.Ldate|log.Ltime, http.ListenAndServe(":5555", nil))
 }
